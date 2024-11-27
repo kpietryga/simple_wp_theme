@@ -23,3 +23,15 @@ function my_theme_enqueue_styles() {
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
+function my_theme_add_woocommerce_support() {
+    add_theme_support('woocommerce');
+}
+add_action('after_setup_theme', 'my_theme_add_woocommerce_support');
+
+function my_theme_enqueue_woocommerce_styles() {
+    if (class_exists('WooCommerce')) {
+        wp_enqueue_style('woocommerce-style', plugins_url('/woocommerce/assets/css/woocommerce.css'));
+    }
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_woocommerce_styles');
