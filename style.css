@@ -8,6 +8,43 @@ Version: 1.0
 */
 
 
+.content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.display-4 {
+    font-weight: bold;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+article:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+article h2 a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+main a.btn-primary {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+main a.btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
 
 /*footer*/
 footer {
@@ -49,3 +86,4 @@ footer p {
     background-color: #0056b3;
     color: #fff;
 }
+
