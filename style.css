@@ -8,6 +8,17 @@ Version: 1.0
 */
 
 
+
+/*footer*/
+footer {
+    border-top: 2px solid #007bff; /* Dodanie niebieskiej linii u góry */
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+
 /*Woocommerce*/
 
 
