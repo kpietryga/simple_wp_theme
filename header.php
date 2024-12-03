@@ -9,7 +9,13 @@
 <body>
 <header class="bg-light py-3">
     <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo -->
+        <?php
+        if (function_exists('the_custom_logo')) {
+            the_custom_logo();
+        } else {
+            echo '<h1>' . "LOGO" . '</h1>';
+        }
+        ?>
         <h1 class="mb-0">
             <a href="<?php echo home_url(); ?>" class="text-decoration-none text-dark">
                 <?php bloginfo('name'); ?>

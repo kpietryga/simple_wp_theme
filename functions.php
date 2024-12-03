@@ -35,3 +35,14 @@ function my_theme_enqueue_woocommerce_styles() {
     }
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_woocommerce_styles');
+
+//Logo
+function logo_support() {
+    add_theme_support('custom-logo', array(
+        'height'      => 100, // Wysokość logo
+        'width'       => 400, // Szerokość logo
+        'flex-height' => true, // Elastyczna wysokość
+        'flex-width'  => true, // Elastyczna szerokość
+    ));
+}
+add_action('after_setup_theme', 'logo_support');
