@@ -9,6 +9,10 @@
             <article class="mb-5">
                 <h1 class="display-4 text-primary mb-3"><?php echo get_the_title(); ?></h1>
                 <p class="text-muted mb-4"><?php echo get_the_date(); ?></p>
+                if (has_post_thumbnail()) {
+                    the_post_thumbnail('medium');
+                    // Możesz użyć 'thumbnail', 'medium', 'large' lub zdefiniować własny rozmiar
+                }
                 <div class="content">
                     <?php the_content(); ?>
                 </div>
