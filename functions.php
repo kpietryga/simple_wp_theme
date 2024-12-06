@@ -48,3 +48,20 @@ function logo_support() {
 add_action('after_setup_theme', 'logo_support');
 
 add_theme_support('post-thumbnails');
+
+function theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'theme_section', array(
+        'title' => 'Theme Settings',
+        'priority' => 30,
+    ) );
+    $wp_customize->add_setting( 'theme_option', array(
+        'default' => 'default value',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( 'theme_option', array(
+        'label' => 'Option Label',
+        'section' => 'theme_section',
+        'type' => 'text',
+    ) );
+}
+add_action( 'customize_register', 'theme_customizer' );
